@@ -6,13 +6,12 @@ void main() {
 
   list[1] = 1;
   assert(list[1] == 1);
-  print(list.first);
-  print(list.isEmpty);
-  print(list.isNotEmpty);
-  print(list.length);
-  print(list.last);
-  print(list.reversed);
-  print(list.single);
+  print(list.first); // 1
+  print(list.isEmpty); // false
+  print(list.isNotEmpty); // true
+  print(list.length); // 3
+  print(list.last); // 3
+  print(list.reversed); // (3, 1, 1)
 
   // 要创建一个编译时常量的列表, 请在列表文字之前添加 const
   var constantList = const [1, 2, 3];
@@ -32,4 +31,11 @@ void main() {
   var listOfInts = [1, 2, 3];
   var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
   assert(listOfStrings[1] == '#1');
+
+  var mappedListIterable = list.map((title) {
+    return title;
+  });
+  print(mappedListIterable); // (1, 1, 3)
+  var mappedList = mappedListIterable.toList();
+  print(mappedList); // [1, 1, 3]
 }
