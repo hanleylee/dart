@@ -1,6 +1,8 @@
 void main() {
   var a = 2; // Bit presentation 10
   var b = 3; // Bit presentation 11
+  print("a => ${a}");
+  print("b => ${b}");
 
   var result = (a & b);
   print("(a & b) => ${result}");
