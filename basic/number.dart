@@ -5,6 +5,7 @@ void main() {
 
   // string to int
   var one = int.parse('1');
+  print(one.runtimeType);
   assert(one == 1);
   print(one.hashCode); // 返回数值的哈希码
   print(one.isFinite); // 如果数字有限, 则返回 true

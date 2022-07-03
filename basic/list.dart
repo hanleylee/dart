@@ -38,4 +38,9 @@ void main() {
   print(mappedListIterable); // (1, 1, 3)
   var mappedList = mappedListIterable.toList();
   print(mappedList); // [1, 1, 3]
+
+  // asMap() is similar with enumerated() in Swift
+  mappedList.asMap().forEach((key, value) {
+    print("key: $key, value: $value");
+  });
 }
