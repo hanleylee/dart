@@ -45,11 +45,17 @@ void main() {
   Map<String, int> map16 = {"a": 1, "b": 2, "c": 3};
   Map<String, int> other = {"a": 1, "c": 4, "d": 7};
   map16.addAll(other); //key相同时value值后者覆盖前者，前者不存在时则添加进来
-  print(map16); //{a: 1, b: 2, c: 4, d: 7}
+  print(map16); // {a: 1, b: 2, c: 4, d: 7}
 
 // 合并两个map 如果key有重复，被合并的map的value覆盖前者
   Map<String, int> map26 = {"a": 1, "b": 2, "c": 3};
   Map<String, int> map27 = {"a": 1, "b": 4, "d": 3, "e": 5};
   map26.addEntries(map27.entries);
-  print(map26); //{a: 1, b: 4, c: 3, d: 3, e: 5}
+  print(map26); // {a: 1, b: 4, c: 3, d: 3, e: 5}
+// Conditional entries
+  Map<String, int> map28 = {
+    'a': 1,
+    if (true) 'b': 2,
+  };
+  print(map28);
 }

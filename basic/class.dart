@@ -61,6 +61,17 @@ class StaticMem {
   }
 }
 
+class Implement {
+  final String what;
+  final String by;
+  const Implement(this.what, this.by);
+}
+
+@Implement(' the following function ', ' J1 ')
+void Func() {
+  print(' Implement me ');
+}
+
 void main() {
   TestClas c = new TestClas();
   c.display();
