@@ -32,28 +32,31 @@ void main() {
           'line breaks.');
 
   var s6 = 'The + operator ' + 'works, as well.';
-  assert(s2 == 'The operator works, as well.');
+  assert(s6 == 'The operator works, as well.');
 
   // 使用带有单引号或双引号的三引号创建多行字符串
   var s7 = '''
       You can create
       multi-line strings like this one.
       ''';
+  print(s7);
   var s8 = """This is also a
       multi-line string.""";
+  print(s8);
 
   // 可以通过在前面加上r来创建“原始”字符串
   var s9 = r'In a raw string, not even \n gets special treatment.';
+  print(s9);
 
   // 文字字符串是编译时常量，只要任何插值表达式是一个编译时常量，其值为null或数值，字符串或布尔值都可以。
   const aConstNum = 0;
   const aConstBool = true;
   const aConstString = 'a constant string';
-
-  var aNum = 0;
-  var aBool = true;
-  var aString = 'a string';
-  const aConstList = [1, 2, 3];
   const validConstString = '$aConstNum $aConstBool $aConstString';
+
+  // var aNum = 0;
+  // var aBool = true;
+  // var aString = 'a string';
+  // const aConstList = [1, 2, 3];
   // const invalidConstString = '$aNum $aBool $aString $aConstList';
 }

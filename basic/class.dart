@@ -49,10 +49,6 @@ class Rectangle implements Shape {
   }
 }
 
-// MARK: Mixin
-// 混入可以复用父类方法的实现, 可以达到类似多继承的效果, 但是避免了多继承的菱形问题
-class Triangle with Shape {}
-
 // MARK: static
 class StaticMem {
   static int num = 0;

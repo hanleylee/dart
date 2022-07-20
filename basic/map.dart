@@ -9,7 +9,11 @@ void main() {
     2: 'helium',
     10: 'neon',
     18: 'argon',
+    if (false) 30: 'Outlet',
+    40: 'world',
   };
+
+  print(nobleGases);
 
   // 使用 Map 显示构造
   var gifts2 = Map();
